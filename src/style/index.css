@@ -48,6 +48,7 @@ html {
 }
 
 .header{
+    z-index: 999;
     display: flex;
     grid-column: span 2;
     grid-row: 1;
