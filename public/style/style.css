@@ -55,7 +55,7 @@ header .menu .menubutton:hover{
 }
 
 .big-image{
-    background: url(../images/i8.jpeg);
+    background: url(../images/i8.jpg);
     background-position: center;
     background-attachment: scroll;
     object-fit: fill;
