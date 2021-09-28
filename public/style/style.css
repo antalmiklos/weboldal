@@ -13,6 +13,36 @@ body {
 
 }
 
+.hero-gradient {
+    position: relative;
+    width: 100%;
+    margin-top: -30px;
+    padding: 60px 12px 40px;
+    background: -webkit-linear-gradient(270deg,#EDE3E9 9%,#2E2D4D 100%);
+    background: linear-gradient(-180deg,#EDE3E9 9%,#2E2D4D 100%);
+    height: 200px;
+    margin-bottom: -10px;
+    z-index: -1;
+}
+.wave {
+    position: absolute;
+    height: 50px;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+svg path {
+    fill: #2E2D4D;
+}
+
+@media screen and (min-width: 1024px) {
+svg {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -23,9 +53,8 @@ header {
     color: black;
     background-color: #C09BD8;
     text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing: 0.5rem;
     font-family: 'Sora', sans-serif;
-
 }
 
 header .title{
@@ -60,6 +89,7 @@ header .menu .menubutton:hover{
     background-attachment: scroll;
     object-fit: fill;
     min-height: 800px;
+    min-width: 100%;
 }
 
 .container{
@@ -90,6 +120,8 @@ header .menu .menubutton:hover{
     text-align: center;
     font-size: 1.5rem;
     text-transform: uppercase;
+    justify-self: center;
+    align-self: center;
     font-family: 'Sora', sans-serif;
     font-weight: 400;
 }
@@ -119,4 +151,149 @@ footer{
     background-color: #EBC3DB;
     color: black;
     padding: 10px
+}
+
+
+@media screen and (max-width: 1024px) {
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+    header {
+        width: 100%;
+        height: 100px;
+        max-width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: black;
+        background-color: #C09BD8;
+        text-transform: uppercase;
+        letter-spacing: unset;
+        height: auto;
+        padding: auto;
+        font-family: 'Sora', sans-serif;
+    }
+    header .title{
+        max-width: 100%;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        line-break: none;
+    }
+
+    header .title span{
+        text-align: center;
+    }
+
+    header .menu{
+        font-size: 1rem;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    header .menu .menubutton{
+        height: 1rem;
+        margin: 0;
+        text-align: center;
+        background-color: #C09BD8;
+    }
+
+    .big-image{
+        margin: 0;
+        width: 100%;
+    }
+
+    .container {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .container .section{
+        padding: 0;
+    }
+
+    .container .section .image{
+        width: 100%;
+    }
+
+    .hero-gradient {
+        position: relative;
+        width: 100%;
+        margin-top: -30px;
+        background: -webkit-linear-gradient(270deg,#EDE3E9 0%,#2E2D4D 100%);
+        background: linear-gradient(-180deg,#EDE3E9 0%,#2E2D4D 100%);
+        height: 100px;
+        margin-bottom: -50px;
+        z-index: -1;
+    }
+    .wave {
+        position: absolute;
+        height: 50px;
+        top: 0;
+        left: 0;
+    }
+
+
+    .container{
+        padding: 0;
+    }
+    
+    .container .about{
+        padding-top: 55px;
+        padding-bottom: 80px;
+    }
+    
+    .container .section {
+        width: 100%;
+        padding-top: 0px;
+        padding-bottom: 45px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(0, auto);
+        grid-auto-flow: column;
+        justify-content: unset;
+        align-items: unset;
+    }
+    
+    .container .section .title{
+        grid-row: 1;
+        grid-column: 1;
+        width: 100%;
+        text-align: center;
+        font-size: 1rem;
+        text-transform: uppercase;
+        font-family: 'Sora', sans-serif;
+        font-weight: 400;
+    }
+    
+    .container .section .content{
+        grid-row: 2;
+        grid-column: 1;
+
+        justify-self: center;
+        align-self: center;
+    }
+    
+    .container .section .image{
+        grid-row: 3;
+        grid-column: 1;
+
+        justify-self: center;
+        align-self: center;
+    }
+    
+    .container .section .image img{
+        width: 100vw; 
+        max-height: 100vw;
+        object-fit: cover;
+    }
+
 }
