@@ -1,0 +1,122 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #2E2D4D;
+    font-size: 1.2rem;
+    color: #EDE3E9;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    max-width: 100%;
+    padding: 30px;
+    color: black;
+    background-color: #C09BD8;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-family: 'Sora', sans-serif;
+
+}
+
+header .title{
+    max-width: 33%;
+    font-size: 2.3rem;
+    font-weight: bolder;
+}
+
+header .menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .menu .menubutton{
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 20px;
+    width: 75px;
+    text-align: center;
+    background-color: #C09BD8;
+    transition: 0.3s ease-out;
+}
+header .menu .menubutton:hover{
+    color: #EDE3E9;
+    transition: 0.3s ease-in;
+}
+
+.big-image{
+    background: url(../images/I_\ -\ 8.jpeg);
+    background-position: center;
+    background-attachment: scroll;
+    object-fit: fill;
+    min-height: 800px;
+}
+
+.container{
+    padding: 50px;
+}
+
+.container .about{
+    padding-top: 55px;
+    padding-bottom: 80px;
+}
+
+.container .section {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, minmax(0, auto));
+    grid-auto-flow: dense;
+    justify-content: unset;
+    align-items: unset;
+    grid-gap: 2rem;
+}
+
+.container .section .title{
+    grid-row: 1;
+    grid-column: 2 / -1;
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-family: 'Sora', sans-serif;
+    font-weight: 400;
+}
+
+.container .section .content{
+    grid-column: 2 / -1;
+    grid-row: 2;
+    justify-self: center;
+    align-self: center;
+}
+
+.container .section .image{
+    grid-column: 1;
+    grid-row: span 2;
+    justify-self: center;
+    align-self: center;
+}
+
+.container .section .image img{
+    max-height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+footer{
+    font-size: 0.9rem;
+    background-color: #EBC3DB;
+    color: black;
+    padding: 10px
+}
